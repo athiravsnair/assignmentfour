@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 5. Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, check if the current number is odd or even, and display the message to the screen as odd or even. -->
+    <title>Odd or Even</title>
+</head>
+<body>
+    <input type="button" id="btn" value="Get odd & even numbers between 0 and 15" onclick="oddeven();"></input>
+    <script>
+    function oddeven(){
+        var num = "";
+        for (var i = 2; i < 16; i++){
+        if ((i % 2) == 0) {
+            num += i + " ";
+        // document. write("Even numbers are " + i + "<br>");
+        }
+         }
+         document. write("Even numbers are " + num + "<br>"); 
+         var num = " ";
+        for (var i = 0; i < 16; i++){
+        if ((i % 2) != 0) {
+            num += i + " ";
+        }
+         }
+         document. write("Odd numbers are " + num);
+    }
+    </script>
+</body>
+</html>

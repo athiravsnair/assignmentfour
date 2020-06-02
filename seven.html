@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 7. Write a JavaScript program that accept two integers and display the larger using findLarge() function. -->
+    <title>Document</title>
+</head>
+<body>
+    Enter first number : <input type="number" name="n" id="num1">
+    <br>
+    <br>
+    Enter second number : <input type="number" name="o" id="num2">
+    <br>
+    <br>
+    <input type="button" name="p" id="result" onclick="findLarge();" value="Find larger number">
+    <br>
+    <p id="demo"></p>
+    <script>
+            function findLarge(){
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                if(num1=num2){
+                    document.getElementById("demo").innerHTML = "Numbers are same";
+                }
+                if(num1>num2){
+                    document.getElementById("demo").innerHTML = num1;
+                }
+                if(num2>num1){ 
+                    document.getElementById("demo").innerHTML = num2;
+                }
+        }
+    </script>
+    
+</body>
+</html>

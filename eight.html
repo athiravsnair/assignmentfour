@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 8. Write a JavaScript program using for…in to read the objects from an array entered by a user and to arrange it in alphabetical order. -->
+    <title>Array Sort</title>
+</head>
+<body>
+Enter each word and click Add: <input type="text" name="word" id = "word"></input>
+<br>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="sort" value="Sort" onclick="sort();"></input>
+<p id="demo"></p> 
+<script>
+var x = 0;
+var array = Array();
+function add_element_to_array(){
+ array[x] = document.getElementById("word").value;
+ x++;
+ document.getElementById("word").value = "";
+}
+function sort(){
+    for (x in array){
+        var output = array.sort();
+    }
+document.getElementById("demo").innerHTML = array;
+</script>
+</body>
+</html>

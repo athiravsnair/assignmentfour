@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 6. Write a JavaScript function to truncate a string if it is longer than the specified number of characters. -->
+    <title>Truncate</title>
+</head>
+<body>
+    Enter a word/sentence : <input type="text" name="s" id = "string"></input>
+    <br>
+    <br>
+    Enter the word limit: <input type="number" name="n" id="limit"></input>
+    <br>
+    <br>
+    <input type="button" id="btn" value="Truncate" onclick="trunc();"></input>
+    <br>
+    <p id="demo"></p>
+    <script>
+    function trunc(){
+        var str = document.getElementById("string");
+        var string = str.value;
+        // console.log(string);
+        var limit = document.getElementById("limit");
+        var length = limit.value;
+        // console.log(length);
+        var res = string.substring(0,length);
+        // console.log(res);
+        document.getElementById("demo").innerHTML = res;
+    }
+    </script>
+</body>
+</html>

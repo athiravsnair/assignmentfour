@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 2. Write a JavaScript program to find the most frequent item of an array. -->
+    <title>Frequent Item of Array</title>
+</head>
+<body>
+Enter each number and click Add: <input type="text" name="n" id = "N"></input>
+<br>
+<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+<input type="button" id="button2" value="Display" onclick="display_array();"></input>
+<input type="button" id="button3" value="Check Frequent Number" onclick="freq();"></input>
+<div id="Result"></div>
+<script>
+    var x = 0;
+    var array = Array();
+    function add_element_to_array()
+    {
+     array[x] = document.getElementById("N").value;
+    //  alert("Element: " + array[x] + " Added at index " + x);
+     x++;
+     document.getElementById("N").value = "";
+    }
+    
+    function display_array()
+    {
+       var e = "<hr/>";   
+        
+       for (var y=0; y<array.length; y++)
+       {
+         e += "Element " + (y+1) + " = " + array[y] + "<br/>";
+       }
+       document.getElementById("Result").innerHTML = e;
+    }
+    function freq(){
+    array[x] = document.getElementById("N").value;
+    var a = 1;
+    var b = 0;
+    var item;
+    for (var i=0; i<array.length; i++){
+        for (var j=i; j<array.length; j++){
+                if (array[i] == array[j])
+                b++;
+                if (a<b)
+                {
+                  a=b; 
+                  item = array[i];
+                }
+        }
+        
+        b=0;
+}
+    alert(item);
+
+}
+</script>
+</body>
+</html>

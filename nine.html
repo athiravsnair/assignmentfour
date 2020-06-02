@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 9. Write a JavaScript program to print the letters of the word “Javascript” as below in each line using for…of. -->
+    <title>Javascript</title>
+</head>
+<body>
+<input type="button" id="script" onclick="script();" value="Click me to print JavaScript">
+<script>
+function script(){
+    var word = ['J','Ja','Jav','Java','JavaS','JavaSc','JavaScr','JavaScri','JavaScrip','JavaScript'];
+    var x;
+
+    for (x of word) {
+        document.write(x + "<br >");
+        }
+}
+</script>
+</body>
+</html>

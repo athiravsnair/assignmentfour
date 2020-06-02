@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 4. Write a JavaScript program to find the sum of squares of the elements of an array. -->
+    <title>Sum of Squares</title>
+</head>
+<body>
+    Enter each number and click Add: <input type="text" name="n" id = "N"></input>
+    <br>
+    <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+    <input type="button" id="button2" value="Sum of Squares" onclick="sumSqr();"></input>
+    <p id="para"></p>
+    <script>
+        var x = 0;
+        var array = Array();
+        function add_element_to_array()
+        {
+         array[x] = document.getElementById("N").value;
+        //  console.log(array[x]);
+        //  console.log(array);
+         x++;
+         document.getElementById("N").value = "";
+        } 
+        function sumSqr(){
+            // var arr = document.getElementById("N").value;
+            var output = 0;
+            // console.log(array);
+            for (var i=0;i<array.length;i++){
+                output = output+ (array[i]*array[i]);
+                // console.log(output);
+                
+            }
+            document.getElementById("para").innerText=output;
+}
+</script>
+</body>
+</html>
